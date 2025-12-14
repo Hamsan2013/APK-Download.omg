@@ -1,13 +1,10 @@
+cat > scripts/run-android.sh << 'EOF'
 #!/bin/bash
-echo "=============================="
-echo "Android Launcher for Raspberry Pi"
-echo "Device check started..."
-echo "=============================="
+echo "Starting Android launcher (mock)..."
 
-uname -a
-echo ""
-echo "NOTE:"
-echo "This script will later boot Android"
-echo "using an official Android image."
-echo ""
-echo "STATUS: Script executed successfully."
+if [ -f android/start.sh ]; then
+    bash android/start.sh
+else
+    echo "Android core not found."
+fi
+EOF
