@@ -1,0 +1,9 @@
+#!/bin/bash
+
+APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+
+echo "Installing APK-Download.omg..."
+
+chmod +x "$APP_DIR/scripts/"*.sh
+
+echo "Installation complete."
