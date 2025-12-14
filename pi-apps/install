@@ -1,9 +1,11 @@
+cat > pi-apps/install << 'EOF'
 #!/bin/bash
-
-APP_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-
 echo "Installing APK-Download.omg..."
 
-chmod +x "$APP_DIR/scripts/"*.sh
+APPDIR="$HOME/Applications/APK-Download.omg"
+mkdir -p "$APPDIR"
+cp -r * "$APPDIR"
 
-echo "Installation complete."
+chmod +x "$APPDIR/scripts/"*.sh
+echo "Installed successfully."
+EOF
