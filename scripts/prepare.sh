@@ -1,17 +1,8 @@
+cat > scripts/prepare.sh << 'EOF'
 #!/bin/bash
-set -e
+echo "Preparing APK-Download.omg environment..."
 
-echo "=== APK-Download.omg : PREPARE ==="
+mkdir -p APKs android launcher pi-apps
 
-BASE_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-
-mkdir -p "$BASE_DIR/android/system"
-mkdir -p "$BASE_DIR/APKs"
-mkdir -p "$BASE_DIR/logs"
-
-echo "Folders prepared:"
-echo "- android/system"
-echo "- APKs"
-echo "- logs"
-
-echo "Prepare complete."
+echo "Preparation complete."
+EOF
