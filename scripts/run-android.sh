@@ -1,10 +1,11 @@
-cat > scripts/run-android.sh << 'EOF'
 #!/bin/bash
-echo "Starting Android launcher (mock)..."
+echo "APK-Download.omg Android Launcher"
 
-if [ -f android/start.sh ]; then
-    bash android/start.sh
-else
-    echo "Android core not found."
+if [ ! -f android/android9.img ]; then
+  echo "Android OS image not found."
+  echo "Place android9.img inside the android/ folder."
+  exit 1
 fi
-EOF
+
+echo "Android OS detected."
+echo "Please reboot and boot from Android SD / image."
