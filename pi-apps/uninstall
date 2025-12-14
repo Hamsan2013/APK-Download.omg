@@ -1,4 +1,7 @@
+cat > pi-apps/uninstall << 'EOF'
 #!/bin/bash
-
 echo "Uninstalling APK-Download.omg..."
-echo "Done."
+
+rm -rf "$HOME/Applications/APK-Download.omg"
+echo "Uninstalled."
+EOF
